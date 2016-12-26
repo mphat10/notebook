@@ -1,17 +1,19 @@
 import random as rd
 def flipping(time):
+	ngua=0
+	sap=0
 	for x in xrange(0,int(time)):
 		rn=rd.random()
 
-		pass
-	if rn>0.5:
-		kq ='mat ngua'
-	else:
-		kq='mat sap'
+		if rn>0.5:
+			ngua+=1
+		else:
+			sap+=1
+		
 
-	return kq
+	return sap, ngua
 
 
 time= raw_input('so lan tung dong xu  >>')
 
-print ('ket qua la: ', flipping(time))
+print ('ket qua sap/ ngua la: ', flipping(time))
